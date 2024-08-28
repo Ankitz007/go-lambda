@@ -17,7 +17,7 @@ jobs:
           go-version: ${{ matrix.go-version }}
       - name: Build binary
         run: |
-          cd example && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -a -o bootstrap main.go && zip deployment.zip bootstrap
+          CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -a -o bootstrap main.go && zip deployment.zip bootstrap
       - name: default deploy
         uses: appleboy/lambda-action@v0.2.0
         with:
@@ -30,4 +30,4 @@ jobs:
           timeout: 10
           handler: bootstrap
           role: arn:aws:iam::896792751088:role/service-role/mutual-funds-lambda-role-8qe7kxc8
-          runtime: nodejs12.x
+          runtime: provided.al2023
