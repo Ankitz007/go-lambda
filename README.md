@@ -1,1 +1,3 @@
-# mutual-funds-nav-backend
+# go-lambda
+
+A sample go script deployed as a serverless lambda function.
