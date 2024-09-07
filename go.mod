@@ -1,4 +1,4 @@
-module github.com/Ankitz007/mutual-funds-nav-backend
+module github.com/Ankitz007/go-lambda
 
 go 1.23.0
 
